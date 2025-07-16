@@ -1,0 +1,61 @@
+{
+  "name": "neonite-theme",
+  "displayName": "Neonite Theme",
+  "description": "A vibrant and modern dark theme for VS Code with neon-inspired syntax highlighting and custom icons.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "publisher": "MohamedElsherbiny",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#0A0E14",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Neonite",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark-color-theme.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "neonite-icons",
+        "label": "Neonite Icons",
+        "path": "./icons/Neonite-icons.json"
+      }
+    ],
+    "productIconThemes": [
+      {
+        "id": "neonite-product-icons",
+        "label": "Neonite Product Icons",
+        "path": "./icons/Neonite-product-icons.json"
+      }
+    ]
+  },
+  "keywords": [
+    "theme",
+    "dark theme",
+    "neonite",
+    "neon",
+    "modern",
+    "icon theme",
+    "product icons",
+    "javascript",
+    "typescript",
+    "python",
+    "rust",
+    "syntax highlighting"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MoElsherbiny/vscode-neonite-theme.git"
+  },
+  "homepage": "https://github.com/MoElsherbiny/vscode-neonite-theme",
+  "license": "MIT"
+}

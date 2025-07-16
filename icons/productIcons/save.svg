@@ -1,0 +1,14 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 4C4 3.44772 4.44772 3 5 3H17C17.5523 3 18 3.44772 18 4V6H20C20.5523 6 21 6.44772 21 7V19C21 19.5523 20.5523 20 20 20H5C4.44772 20 4 19.5523 4 19V4ZM6 5V18H19V8H17V5H6ZM8 7H14V9H8V7Z" fill="#0CFFE1" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.5"/>
+  <path d="M4 4C4 3.44772 4.44772 3 5 3H17C17.5523 3 18 3.44772 18 4V6H20C20.5523 6 21 6.44772 21 7V19C21 19.5523 20.5523 20 20 20H5C4.44772 20 4 19.5523 4 19V4ZM6 5V18H19V8H17V5H6ZM8 7H14V9H8V7Z" fill="#0CFFE1" stroke="#0CFFE1" stroke-width="0.8"/>
+  <g filter="url(#glow-save)">
+    <path d="M4 4C4 3.44772 4.44772 3 5 3H17C17.5523 3 18 3.44772 18 4V6H20C20.5523 6 21 6.44772 21 7V19C21 19.5523 20.5523 20 20 20H5C4.44772 20 4 19.5523 4 19V4ZM6 5V18H19V8H17V5H6ZM8 7H14V9H8V7Z" fill="#0CFFE1" stroke="#0CFFE1" stroke-width="0.7"/>
+  </g>
+  <defs>
+    <filter id="glow-save" x="-1" y="-1" width="26" height="26" filterUnits="userSpaceOnUse">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.5"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.05  0 0 0 0 1  0 0 0 0 0.88  0 0 0 1.2 0"/>
+    </filter>
+  </defs>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-source" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#FF92DF" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main icon with glow effect -->
+  <g filter="url(#glow-source)" fill="none" stroke="#FF92DF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="7" cy="18" r="3" />
+    <circle cx="17" cy="6" r="3" />
+    <circle cx="17" cy="18" r="3" />
+    <path d="M7 15l0 -8a5 5 0 0 1 5 -5h0a5 5 0 0 1 5 5l0 8" />
+    <path d="M14 18h-4" />
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="7" cy="18" r="1" fill="#F0F4FC" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.1s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="17" cy="6" r="1" fill="#F0F4FC" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="17" cy="18" r="1" fill="#F0F4FC" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.5s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Inner accent -->
+  <path d="M7 15l0 -6" stroke="#6CF3FF" stroke-width="0.5" opacity="0.7" />
+  <path d="M12 6l0 10" stroke="#6CF3FF" stroke-width="0.5" opacity="0.7" />
+  <path d="M17 8l0 7" stroke="#6CF3FF" stroke-width="0.5" opacity="0.7" />
+</svg>

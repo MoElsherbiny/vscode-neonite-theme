@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-search" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#9D6CFF" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main icon with glow effect -->
+  <g filter="url(#glow-search)" fill="none" stroke="#B28CFF" stroke-width="2" stroke-linecap="round">
+    <circle cx="11" cy="11" r="6" />
+    <path d="M19.5 19.5l-4.5-4.5" stroke-width="2.5" />
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="11" cy="11" r="1" fill="#F0F4FC" opacity="0.9">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Inner accent -->
+  <circle cx="11" cy="11" r="3" stroke="#6CF3FF" stroke-width="0.5" fill="none" opacity="0.7">
+    <animate attributeName="r" values="3;3.5;3" dur="2s" repeatCount="indefinite" />
+  </circle>
+</svg>

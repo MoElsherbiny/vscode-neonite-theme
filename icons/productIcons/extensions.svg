@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-extensions" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#6CF3FF" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main icon with glow effect -->
+  <g filter="url(#glow-extensions)" fill="none" stroke="#A4FFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="4" width="6" height="6" rx="1" />
+    <rect x="14" y="4" width="6" height="6" rx="1" />
+    <rect x="4" y="14" width="6" height="6" rx="1" />
+    <rect x="14" y="14" width="6" height="6" rx="1" />
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="7" cy="7" r="1" fill="#F0F4FC" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="17" cy="7" r="1" fill="#F0F4FC" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="7" cy="17" r="1" fill="#F0F4FC" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.6s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="17" cy="17" r="1" fill="#F0F4FC" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.8s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Inner accent -->
+  <line x1="10" y1="7" x2="14" y2="7" stroke="#9D6CFF" stroke-width="0.5" opacity="0.7" />
+  <line x1="7" y1="10" x2="7" y2="14" stroke="#9D6CFF" stroke-width="0.5" opacity="0.7" />
+  <line x1="17" y1="10" x2="17" y2="14" stroke="#9D6CFF" stroke-width="0.5" opacity="0.7" />
+  <line x1="10" y1="17" x2="14" y2="17" stroke="#9D6CFF" stroke-width="0.5" opacity="0.7" />
+</svg>

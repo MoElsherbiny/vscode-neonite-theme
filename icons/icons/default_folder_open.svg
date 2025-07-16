@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="neonGlowFolderOpen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff00ff" />
+      <stop offset="100%" stop-color="#00ffff" />
+    </linearGradient>
+    <filter id="folderOpenGlow">
+      <feGaussianBlur stdDeviation="0.8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base folder shape -->
+  <path d="M3 4h6l2 2h10v3l-2 9H5l-2-9V4z" fill="#151525" stroke="url(#neonGlowFolderOpen)" stroke-width="0.75" filter="url(#folderOpenGlow)" />
+
+  <!-- Folder contents effect -->
+  <path d="M5 9h14l-1.5 7h-11L5 9z" fill="#252540" stroke="#00ffff" stroke-width="0.4" opacity="0.7" />
+</svg>

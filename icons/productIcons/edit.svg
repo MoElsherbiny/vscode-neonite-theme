@@ -1,0 +1,14 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <path d="M3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM20.71 7.04C21.1 6.65 21.1 6.02 20.71 5.63L18.37 3.29C17.98 2.9 17.35 2.9 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04Z" fill="#F9F871" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.5"/>
+  <path d="M3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM20.71 7.04C21.1 6.65 21.1 6.02 20.71 5.63L18.37 3.29C17.98 2.9 17.35 2.9 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04Z" fill="#F9F871" stroke="#F9F871" stroke-width="0.8"/>
+  <g filter="url(#glow-edit)">
+    <path d="M3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM20.71 7.04C21.1 6.65 21.1 6.02 20.71 5.63L18.37 3.29C17.98 2.9 17.35 2.9 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04Z" fill="#F9F871" stroke="#F9F871" stroke-width="0.7"/>
+  </g>
+  <defs>
+    <filter id="glow-edit" x="-1" y="-1" width="26" height="26" filterUnits="userSpaceOnUse">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.5"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.976  0 0 0 0 0.973  0 0 0 0 0.443  0 0 0 1.2 0"/>
+    </filter>
+  </defs>
+</svg>

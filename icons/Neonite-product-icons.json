@@ -1,0 +1,80 @@
+{
+  "id": "neon-horizon-product-icons",
+  "label": "Neon Horizon Product Icons",
+  "fonts": [
+    {
+      "id": "neon-horizon",
+      "src": [
+        {
+          "path": "./fonts/neon-horizon.woff",
+          "format": "woff"
+        }
+      ],
+      "weight": "normal",
+      "style": "normal",
+      "size": "100%"
+    }
+  ],
+  "iconDefinitions": {
+    "explorer-view": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E001"
+    },
+    "search-view": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E002"
+    },
+    "debug-view": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E003"
+    },
+    "extensions-view": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E004"
+    },
+    "scm-view": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E005"
+    },
+    "settings-view": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E006"
+    },
+    "add": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E007"
+    },
+    "close": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E008"
+    },
+    "edit": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E009"
+    },
+    "save": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E00A"
+    },
+    "trash": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E00B"
+    },
+    "error": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E00C"
+    },
+    "warning": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E00D"
+    },
+    "info": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E00E"
+    },
+    "check": {
+      "fontId": "neon-horizon",
+      "fontCharacter": "\\E00F"
+    }
+  }
+}
