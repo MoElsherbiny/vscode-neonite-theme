@@ -44,7 +44,7 @@ X
 
 ## Screenshots
 
-![Neonite Theme Preview](images/preview.png)
+![Neonite Theme Preview](images/icon.png)
 
 _Neonite theme showcasing JavaScript/TypeScript syntax highlighting_
 
