@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-terminal" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#00D9FF" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="terminal-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00B8D9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main terminal window -->
+  <g filter="url(#glow-terminal)">
+    <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="url(#terminal-gradient)" stroke-width="1.5" />
+    <!-- Terminal header -->
+    <rect x="2" y="4" width="20" height="3" rx="2" fill="url(#terminal-gradient)" opacity="0.3" />
+    <!-- Terminal dots -->
+    <circle cx="5" cy="5.5" r="0.5" fill="#FF6E6E" opacity="0.8" />
+    <circle cx="7" cy="5.5" r="0.5" fill="#FFD93D" opacity="0.8" />
+    <circle cx="9" cy="5.5" r="0.5" fill="#6BCF7F" opacity="0.8" />
+
+    <!-- Terminal prompt -->
+    <text x="4" y="12" font-family="monospace" font-size="3" fill="#00D9FF" opacity="0.9">$</text>
+    <rect x="6" y="10" width="8" height="1" fill="#00D9FF" opacity="0.7" />
+
+    <!-- Cursor blink -->
+    <rect x="15" y="10" width="1" height="2" fill="#00D9FF">
+      <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- Subtle background glow -->
+  <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="#00D9FF" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite" />
+  </rect>
+</svg>

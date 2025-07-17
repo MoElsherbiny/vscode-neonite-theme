@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-layout" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#A0E7E5" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="layout-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A0E7E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7DD3FC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main layout grid -->
+  <g filter="url(#glow-layout)">
+    <!-- Main container -->
+    <rect x="2" y="2" width="20" height="20" rx="2" fill="none" stroke="url(#layout-gradient)" stroke-width="1.5" />
+
+    <!-- Grid divisions -->
+    <line x1="2" y1="8" x2="22" y2="8" stroke="url(#layout-gradient)" stroke-width="1" opacity="0.7" />
+    <line x1="2" y1="16" x2="22" y2="16" stroke="url(#layout-gradient)" stroke-width="1" opacity="0.7" />
+    <line x1="10" y1="2" x2="10" y2="22" stroke="url(#layout-gradient)" stroke-width="1" opacity="0.7" />
+    <line x1="16" y1="2" x2="16" y2="22" stroke="url(#layout-gradient)" stroke-width="1" opacity="0.7" />
+
+    <!-- Panel indicators -->
+    <rect x="3" y="3" width="6" height="4" rx="0.5" fill="url(#layout-gradient)" opacity="0.3" />
+    <rect x="11" y="3" width="4" height="4" rx="0.5" fill="url(#layout-gradient)" opacity="0.4" />
+    <rect x="17" y="3" width="4" height="4" rx="0.5" fill="url(#layout-gradient)" opacity="0.3" />
+    <rect x="3" y="9" width="6" height="6" rx="0.5" fill="url(#layout-gradient)" opacity="0.2" />
+    <rect x="11" y="9" width="10" height="6" rx="0.5" fill="url(#layout-gradient)" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite" />
+    </rect>
+    <rect x="3" y="17" width="18" height="4" rx="0.5" fill="url(#layout-gradient)" opacity="0.3" />
+  </g>
+
+  <!-- Subtle background glow -->
+  <rect x="2" y="2" width="20" height="20" rx="2" fill="none" stroke="#A0E7E5" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite" />
+  </rect>
+</svg>

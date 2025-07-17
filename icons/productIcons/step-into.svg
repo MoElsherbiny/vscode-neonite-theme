@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-step-into" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#A0E7E5" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="step-into-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#A0E7E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7DD3FC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main step into arrow -->
+  <g filter="url(#glow-step-into)">
+    <!-- Downward arrow -->
+    <line x1="12" y1="4" x2="12" y2="18" stroke="url(#step-into-gradient)" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Arrow head -->
+    <path d="M9 15 L12 18 L15 15" fill="none" stroke="url(#step-into-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Function box representation -->
+    <rect x="8" y="19" width="8" height="3" rx="1" fill="none" stroke="url(#step-into-gradient)" stroke-width="1" opacity="0.7" />
+
+    <!-- Indicator dots showing progression -->
+    <circle cx="12" cy="6" r="1" fill="url(#step-into-gradient)" opacity="0.8" />
+    <circle cx="12" cy="10" r="1" fill="url(#step-into-gradient)" opacity="0.6" />
+    <circle cx="12" cy="14" r="1" fill="url(#step-into-gradient)" opacity="0.9">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Subtle background glow -->
+  <line x1="12" y1="4" x2="12" y2="18" stroke="#A0E7E5" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite" />
+  </line>
+</svg>

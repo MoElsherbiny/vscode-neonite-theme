@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-lightbulb" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#FFD93D" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <radialGradient id="lightbulb-gradient" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#FFF3A0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD93D;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Main lightbulb -->
+  <g filter="url(#glow-lightbulb)">
+    <!-- Bulb shape -->
+    <path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.4 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17h8v-2.3c1.8-1.2 3-3.3 3-5.7 0-3.9-3.1-7-7-7z" fill="url(#lightbulb-gradient)" stroke="url(#lightbulb-gradient)" stroke-width="1" />
+
+    <!-- Filament -->
+    <path d="M10 8c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z" fill="#F1C40F" opacity="0.8" />
+
+    <!-- Light rays -->
+    <line x1="12" y1="1" x2="12" y2="3" stroke="url(#lightbulb-gradient)" stroke-width="1.5" stroke-linecap="round" opacity="0.7" />
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="url(#lightbulb-gradient)" stroke-width="1.5" stroke-linecap="round" opacity="0.7" />
+    <line x1="1" y1="12" x2="3" y2="12" stroke="url(#lightbulb-gradient)" stroke-width="1.5" stroke-linecap="round" opacity="0.7" />
+    <line x1="19.78" y1="4.22" x2="18.36" y2="5.64" stroke="url(#lightbulb-gradient)" stroke-width="1.5" stroke-linecap="round" opacity="0.7" />
+    <line x1="21" y1="12" x2="23" y2="12" stroke="url(#lightbulb-gradient)" stroke-width="1.5" stroke-linecap="round" opacity="0.7" />
+
+    <!-- Animated glow effect -->
+    <circle cx="12" cy="9" r="6" fill="none" stroke="#FFD93D" stroke-width="0.5" opacity="0.3">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Base screw threads -->
+  <g filter="url(#glow-lightbulb)">
+    <line x1="9" y1="17" x2="15" y2="17" stroke="url(#lightbulb-gradient)" stroke-width="1" opacity="0.6" />
+    <line x1="9" y1="19" x2="15" y2="19" stroke="url(#lightbulb-gradient)" stroke-width="1" opacity="0.6" />
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-feedback" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#6BCF7F" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="feedback-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6BCF7F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4ECDC4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main feedback icon -->
+  <g filter="url(#glow-feedback)">
+    <!-- Speech bubble -->
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none" stroke="url(#feedback-gradient)" stroke-width="1.5" />
+
+    <!-- Feedback content -->
+    <circle cx="9" cy="9" r="1" fill="url(#feedback-gradient)" opacity="0.8" />
+    <circle cx="15" cy="9" r="1" fill="url(#feedback-gradient)" opacity="0.8" />
+    <path d="M9 13s1.5 2 3 2 3-2 3-2" stroke="url(#feedback-gradient)" stroke-width="1.5" stroke-linecap="round" fill="none" />
+
+    <!-- Feedback stars -->
+    <g transform="translate(16, 4)">
+      <path d="M2 1l0.5 1.5L4 3l-1.5 0.5L2 5l-0.5-1.5L0 3l1.5-0.5z" fill="url(#feedback-gradient)" opacity="0.7">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite" />
+      </path>
+    </g>
+
+    <g transform="translate(18, 7)">
+      <path d="M1.5 0.5l0.3 0.9L2.5 1.5l-0.7 0.3L1.5 2.5l-0.3-0.9L0.5 1.5l0.7-0.3z" fill="url(#feedback-gradient)" opacity="0.6">
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite" />
+      </path>
+    </g>
+  </g>
+
+  <!-- Subtle background glow -->
+  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none" stroke="#6BCF7F" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite" />
+  </path>
+</svg>

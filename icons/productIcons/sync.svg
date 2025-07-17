@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-sync" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#FF9F43" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="sync-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9F43;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF7675;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main sync arrows -->
+  <g filter="url(#glow-sync)">
+    <!-- Top arrow -->
+    <path d="M3 9 L12 9 L12 6 L21 12 L12 18 L12 15 L3 15 Z" fill="none" stroke="url(#sync-gradient)" stroke-width="1.5" />
+    <path d="M15 9 L18 12 L15 15" fill="none" stroke="url(#sync-gradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Bottom arrow (reversed) -->
+    <path d="M21 15 L12 15 L12 18 L3 12 L12 6 L12 9 L21 9 Z" fill="none" stroke="url(#sync-gradient)" stroke-width="1.5" opacity="0.6" />
+    <path d="M9 15 L6 12 L9 9" fill="none" stroke="url(#sync-gradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+
+    <!-- Center sync indicator -->
+    <circle cx="12" cy="12" r="1.5" fill="url(#sync-gradient)" opacity="0.8">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Animated pulse effect -->
+  <circle cx="12" cy="12" r="8" fill="none" stroke="#FF9F43" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite" />
+  </circle>
+</svg>

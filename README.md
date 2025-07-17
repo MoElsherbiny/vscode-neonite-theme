@@ -88,7 +88,41 @@ Neonite comes with custom-designed icon themes that perfectly complement the dar
 - **Neonite Icons**: Custom file icons with vibrant colors matching the theme palette
 - **Neonite Product Icons**: Cohesive UI icons for a consistent visual experience
 
-These icon themes are automatically included with the theme installation and provide enhanced visual consistency across your VS Code interface.
+### How to Enable the Icon Themes
+
+#### File Icons (Neonite Icons)
+
+1. Go to **File > Preferences > File Icon Theme** (`Ctrl+K Ctrl+I`)
+2. Select **Neonite Icons** from the list
+
+#### Product Icons (Neonite Product Icons)
+
+1. Go to **File > Preferences > Product Icon Theme**
+2. Select **Neonite Product Icons** from the list
+
+**Note**: If you don't see the product icon theme option, you may need to:
+
+- **Make sure you're using VS Code version 1.74.0 or higher** (Latest features require recent VS Code versions)
+- **Update your VS Code**: Go to [code.visualstudio.com](https://code.visualstudio.com) and download the latest version
+- Check your current VS Code version: **Help > About** or run `code --version` in terminal
+- **Your current version (1.1.6) is from 2016** - Product icons weren't available until 2020
+- Restart VS Code after installing the theme
+- Check that the theme is properly installed in the Extensions view
+
+**🚨 Critical Update Required**: Your VS Code version (1.1.6) is extremely outdated. Please update to the latest version to use product icons and modern VS Code features.
+
+**Important**: Product icon themes require VS Code 1.74.0 or newer. **You need to update your VS Code from version 1.1.6 to use product icons and modern features.**
+
+### 🔄 How to Update VS Code
+
+1. **Download latest version**: Go to [https://code.visualstudio.com](https://code.visualstudio.com)
+2. **Install over existing**: The installer will update your current installation
+3. **Restart VS Code**: Close and reopen VS Code
+4. **Verify update**: Check **Help > About** - should show version 1.84.0 or newer
+5. **Reinstall theme**: Install the latest Neonite theme extension
+6. **Enable product icons**: Go to **File > Preferences > Product Icon Theme** and select **Neonite Product Icons**
+
+These icon themes are automatically included with the theme installation and provide enhanced visual consistency across your VS Code interface, including the sidebar, activity bar, and all UI elements.
 
 ## Language Support
 

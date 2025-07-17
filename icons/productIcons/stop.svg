@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-stop" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#FF6E6E" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="stop-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6E6E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF4757;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main stop square -->
+  <g filter="url(#glow-stop)">
+    <rect x="7" y="7" width="10" height="10" rx="1" fill="url(#stop-gradient)" stroke="url(#stop-gradient)" stroke-width="1" />
+
+    <!-- Inner highlight -->
+    <rect x="8.5" y="8.5" width="7" height="7" rx="0.5" fill="#FFB3B3" opacity="0.6">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- Circular background -->
+  <circle cx="12" cy="12" r="10" fill="none" stroke="url(#stop-gradient)" stroke-width="1.5" opacity="0.4" />
+
+  <!-- Animated pulse ring -->
+  <circle cx="12" cy="12" r="8" fill="none" stroke="#FF6E6E" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite" />
+  </circle>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-file" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#A0E7E5" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="file-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A0E7E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7DD3FC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main file shape -->
+  <g filter="url(#glow-file)">
+    <!-- File body -->
+    <path d="M6 2 L18 2 L18 8 L20 10 L20 22 L6 22 Z" fill="none" stroke="url(#file-gradient)" stroke-width="1.5" />
+
+    <!-- File corner fold -->
+    <path d="M18 2 L18 8 L20 10" fill="none" stroke="url(#file-gradient)" stroke-width="1.5" />
+    <path d="M18 8 L20 10 L20 8 L18 8 Z" fill="url(#file-gradient)" opacity="0.3" />
+
+    <!-- File content lines -->
+    <line x1="8" y1="6" x2="16" y2="6" stroke="url(#file-gradient)" stroke-width="1" opacity="0.7" />
+    <line x1="8" y1="9" x2="15" y2="9" stroke="url(#file-gradient)" stroke-width="1" opacity="0.6" />
+    <line x1="8" y1="12" x2="17" y2="12" stroke="url(#file-gradient)" stroke-width="1" opacity="0.5" />
+    <line x1="8" y1="15" x2="14" y2="15" stroke="url(#file-gradient)" stroke-width="1" opacity="0.4" />
+    <line x1="8" y1="18" x2="16" y2="18" stroke="url(#file-gradient)" stroke-width="1" opacity="0.3" />
+
+    <!-- Animated dot indicator -->
+    <circle cx="17" cy="4" r="0.5" fill="url(#file-gradient)">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Subtle background glow -->
+  <path d="M6 2 L18 2 L18 8 L20 10 L20 22 L6 22 Z" fill="none" stroke="#A0E7E5" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite" />
+  </path>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-accounts" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#9C88FF" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="accounts-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9C88FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7B68EE;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main account icon -->
+  <g filter="url(#glow-accounts)">
+    <!-- User head -->
+    <circle cx="12" cy="8" r="4" fill="none" stroke="url(#accounts-gradient)" stroke-width="2" />
+
+    <!-- User body -->
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="url(#accounts-gradient)" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Inner highlights -->
+    <circle cx="12" cy="8" r="2" fill="#D4C5FF" opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Account status indicator -->
+    <circle cx="18" cy="6" r="2" fill="#4ECDC4" stroke="#9C88FF" stroke-width="1" opacity="0.8">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Subtle background glow -->
+  <circle cx="12" cy="8" r="4" fill="none" stroke="#9C88FF" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite" />
+  </circle>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-output" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#A0E7E5" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="output-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A0E7E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7DD3FC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main output window -->
+  <g filter="url(#glow-output)">
+    <rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="url(#output-gradient)" stroke-width="1.5" />
+
+    <!-- Output lines -->
+    <line x1="5" y1="8" x2="19" y2="8" stroke="url(#output-gradient)" stroke-width="1" opacity="0.8" />
+    <line x1="5" y1="11" x2="16" y2="11" stroke="url(#output-gradient)" stroke-width="1" opacity="0.6" />
+    <line x1="5" y1="14" x2="18" y2="14" stroke="url(#output-gradient)" stroke-width="1" opacity="0.7" />
+    <line x1="5" y1="17" x2="13" y2="17" stroke="url(#output-gradient)" stroke-width="1" opacity="0.5" />
+
+    <!-- Arrow indicating output flow -->
+    <path d="M2 12l3-2v1h3v2h-3v1z" fill="url(#output-gradient)" opacity="0.9" />
+
+    <!-- Animated dot to show activity -->
+    <circle cx="17" cy="6" r="1" fill="#A0E7E5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Subtle background glow -->
+  <rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="#A0E7E5" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite" />
+  </rect>
+</svg>

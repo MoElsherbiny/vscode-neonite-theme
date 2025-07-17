@@ -1,80 +1,198 @@
 {
-  "id": "neon-horizon-product-icons",
-  "label": "Neon Horizon Product Icons",
-  "fonts": [
-    {
-      "id": "neon-horizon",
-      "src": [
-        {
-          "path": "./fonts/neon-horizon.woff",
-          "format": "woff"
-        }
-      ],
-      "weight": "normal",
-      "style": "normal",
-      "size": "100%"
-    }
-  ],
+  "id": "neonite-product-icons",
+  "label": "Neonite Product Icons",
   "iconDefinitions": {
-    "explorer-view": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E001"
-    },
-    "search-view": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E002"
-    },
-    "debug-view": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E003"
-    },
-    "extensions-view": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E004"
-    },
-    "scm-view": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E005"
-    },
-    "settings-view": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E006"
-    },
     "add": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E007"
+      "iconPath": "./productIcons/add.svg"
     },
     "close": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E008"
+      "iconPath": "./productIcons/close.svg"
     },
     "edit": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E009"
+      "iconPath": "./productIcons/edit.svg"
     },
     "save": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E00A"
+      "iconPath": "./productIcons/save.svg"
     },
     "trash": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E00B"
+      "iconPath": "./productIcons/trash.svg"
     },
     "error": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E00C"
+      "iconPath": "./productIcons/error.svg"
     },
     "warning": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E00D"
+      "iconPath": "./productIcons/warning.svg"
     },
     "info": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E00E"
+      "iconPath": "./productIcons/info.svg"
     },
     "check": {
-      "fontId": "neon-horizon",
-      "fontCharacter": "\\E00F"
+      "iconPath": "./productIcons/check.svg"
+    },
+    "terminal": {
+      "iconPath": "./productIcons/terminal.svg"
+    },
+    "problems": {
+      "iconPath": "./productIcons/problems.svg"
+    },
+    "output": {
+      "iconPath": "./productIcons/output.svg"
+    },
+    "debug-console": {
+      "iconPath": "./productIcons/debug-console.svg"
+    },
+    "run": {
+      "iconPath": "./productIcons/run.svg"
+    },
+    "stop": {
+      "iconPath": "./productIcons/stop.svg"
+    },
+    "restart": {
+      "iconPath": "./productIcons/restart.svg"
+    },
+    "pause": {
+      "iconPath": "./productIcons/pause.svg"
+    },
+    "step-over": {
+      "iconPath": "./productIcons/step-over.svg"
+    },
+    "step-into": {
+      "iconPath": "./productIcons/step-into.svg"
+    },
+    "step-out": {
+      "iconPath": "./productIcons/step-out.svg"
+    },
+    "breakpoint": {
+      "iconPath": "./productIcons/breakpoint.svg"
+    },
+    "folder": {
+      "iconPath": "./productIcons/folder.svg"
+    },
+    "file": {
+      "iconPath": "./productIcons/file.svg"
+    },
+    "refresh": {
+      "iconPath": "./productIcons/refresh.svg"
+    },
+    "sync": {
+      "iconPath": "./productIcons/sync.svg"
+    },
+    "notifications": {
+      "iconPath": "./productIcons/notifications.svg"
+    },
+    "accounts": {
+      "iconPath": "./productIcons/accounts.svg"
+    },
+    "remote": {
+      "iconPath": "./productIcons/remote.svg"
+    },
+    "layout": {
+      "iconPath": "./productIcons/layout.svg"
+    },
+    "lightbulb": {
+      "iconPath": "./productIcons/lightbulb.svg"
+    },
+    "feedback": {
+      "iconPath": "./productIcons/feedback.svg"
+    },
+    "explorer": {
+      "iconPath": "./productIcons/explorer.svg"
+    },
+    "search": {
+      "iconPath": "./productIcons/search.svg"
+    },
+    "debug": {
+      "iconPath": "./productIcons/debug.svg"
+    },
+    "extensions": {
+      "iconPath": "./productIcons/extensions.svg"
+    },
+    "source-control": {
+      "iconPath": "./productIcons/source-control.svg"
+    },
+    "settings": {
+      "iconPath": "./productIcons/settings.svg"
+    },
+    "git-branch": {
+      "iconPath": "./productIcons/source-control.svg"
+    },
+    "git-commit": {
+      "iconPath": "./productIcons/check.svg"
+    },
+    "git-pull-request": {
+      "iconPath": "./productIcons/sync.svg"
+    },
+    "toolbar-more": {
+      "iconPath": "./productIcons/add.svg"
+    },
+    "panel-maximize": {
+      "iconPath": "./productIcons/layout.svg"
+    },
+    "panel-restore": {
+      "iconPath": "./productIcons/layout.svg"
+    },
+    "sidebar-left": {
+      "iconPath": "./productIcons/layout.svg"
+    },
+    "sidebar-right": {
+      "iconPath": "./productIcons/layout.svg"
+    },
+    "panel": {
+      "iconPath": "./productIcons/layout.svg"
+    },
+    "split-horizontal": {
+      "iconPath": "./productIcons/layout.svg"
+    },
+    "split-vertical": {
+      "iconPath": "./productIcons/layout.svg"
+    },
+    "zoom-in": {
+      "iconPath": "./productIcons/add.svg"
+    },
+    "zoom-out": {
+      "iconPath": "./productIcons/close.svg"
+    },
+    "home": {
+      "iconPath": "./productIcons/folder.svg"
+    },
+    "menu": {
+      "iconPath": "./productIcons/layout.svg"
+    },
+    "more": {
+      "iconPath": "./productIcons/add.svg"
+    },
+    "search-view-icon": {
+      "iconPath": "./productIcons/search.svg"
+    },
+    "explorer-view-icon": {
+      "iconPath": "./productIcons/explorer.svg"
+    },
+    "debug-view-icon": {
+      "iconPath": "./productIcons/debug.svg"
+    },
+    "extensions-view-icon": {
+      "iconPath": "./productIcons/extensions.svg"
+    },
+    "scm-view-icon": {
+      "iconPath": "./productIcons/source-control.svg"
+    },
+    "settings-view-icon": {
+      "iconPath": "./productIcons/settings.svg"
+    },
+    "remote-explorer-view-icon": {
+      "iconPath": "./productIcons/remote.svg"
+    },
+    "terminal-view-icon": {
+      "iconPath": "./productIcons/terminal.svg"
+    },
+    "problems-view-icon": {
+      "iconPath": "./productIcons/problems.svg"
+    },
+    "output-view-icon": {
+      "iconPath": "./productIcons/output.svg"
+    },
+    "debug-console-view-icon": {
+      "iconPath": "./productIcons/debug-console.svg"
     }
   }
 }

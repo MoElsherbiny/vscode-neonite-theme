@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-restart" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#9C88FF" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="restart-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9C88FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7B68EE;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main restart arrow -->
+  <g filter="url(#glow-restart)">
+    <path d="M4 12a8 8 0 0 1 8-8V2l4 4-4 4V8a6 6 0 0 0-6 6c0 1.1.3 2.1.8 3L4 16.2A8 8 0 0 1 4 12z" fill="url(#restart-gradient)" stroke="url(#restart-gradient)" stroke-width="1" />
+    <path d="M20 12a8 8 0 0 1-8 8v2l-4-4 4-4v2a6 6 0 0 0 6-6c0-1.1-.3-2.1-.8-3l2.8-.8A8 8 0 0 1 20 12z" fill="url(#restart-gradient)" stroke="url(#restart-gradient)" stroke-width="1" />
+
+    <!-- Inner highlight -->
+    <circle cx="12" cy="12" r="2" fill="#D4C5FF" opacity="0.6">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Animated rotation effect -->
+  <circle cx="12" cy="12" r="9" fill="none" stroke="#9C88FF" stroke-width="0.5" opacity="0.3" stroke-dasharray="2,2">
+    <animateTransform attributeName="transform" type="rotate" values="0 12 12;360 12 12" dur="3s" repeatCount="indefinite" />
+  </circle>
+</svg>

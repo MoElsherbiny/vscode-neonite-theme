@@ -3,28 +3,40 @@
   <defs>
     <filter id="glow-search" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="1.5" result="blur" />
-      <feFlood flood-color="#9D6CFF" flood-opacity="0.8" result="color" />
+      <feFlood flood-color="#FFD93D" flood-opacity="0.8" result="color" />
       <feComposite in="color" in2="blur" operator="in" result="glow" />
       <feMerge>
         <feMergeNode in="glow" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
+    <linearGradient id="search-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD93D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F1C40F;stop-opacity:1" />
+    </linearGradient>
   </defs>
 
-  <!-- Main icon with glow effect -->
-  <g filter="url(#glow-search)" fill="none" stroke="#B28CFF" stroke-width="2" stroke-linecap="round">
-    <circle cx="11" cy="11" r="6" />
-    <path d="M19.5 19.5l-4.5-4.5" stroke-width="2.5" />
+  <!-- Main search icon -->
+  <g filter="url(#glow-search)">
+    <!-- Search glass -->
+    <circle cx="11" cy="11" r="7" fill="none" stroke="url(#search-gradient)" stroke-width="2" />
+
+    <!-- Search handle -->
+    <path d="M19 19l-3.5-3.5" stroke="url(#search-gradient)" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Inner highlight -->
+    <circle cx="11" cy="11" r="4" fill="#FFF3A0" opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Search beam effect -->
+    <circle cx="11" cy="11" r="5" fill="none" stroke="#FFE066" stroke-width="0.5" opacity="0.6">
+      <animate attributeName="r" values="5;6.5;5" dur="2.5s" repeatCount="indefinite" />
+    </circle>
   </g>
 
-  <!-- Decorative elements -->
-  <circle cx="11" cy="11" r="1" fill="#F0F4FC" opacity="0.9">
-    <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite" />
-  </circle>
-
-  <!-- Inner accent -->
-  <circle cx="11" cy="11" r="3" stroke="#6CF3FF" stroke-width="0.5" fill="none" opacity="0.7">
-    <animate attributeName="r" values="3;3.5;3" dur="2s" repeatCount="indefinite" />
+  <!-- Subtle background glow -->
+  <circle cx="11" cy="11" r="7" fill="none" stroke="#FFD93D" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite" />
   </circle>
 </svg>

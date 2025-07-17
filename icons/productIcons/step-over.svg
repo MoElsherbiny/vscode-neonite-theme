@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-step-over" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#00D9FF" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="step-over-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4ECDC4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main step over arrow -->
+  <g filter="url(#glow-step-over)">
+    <!-- Curved arrow path -->
+    <path d="M4 12 Q12 4 20 12" fill="none" stroke="url(#step-over-gradient)" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Arrow head -->
+    <path d="M17 9 L20 12 L17 15" fill="none" stroke="url(#step-over-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Small indicator dots -->
+    <circle cx="6" cy="11" r="1" fill="url(#step-over-gradient)" opacity="0.8" />
+    <circle cx="12" cy="8" r="1" fill="url(#step-over-gradient)" opacity="0.6" />
+    <circle cx="18" cy="11" r="1" fill="url(#step-over-gradient)" opacity="0.9">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Subtle background glow -->
+  <path d="M4 12 Q12 4 20 12" fill="none" stroke="#00D9FF" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite" />
+  </path>
+</svg>

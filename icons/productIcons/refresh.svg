@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Outer glow filter -->
+  <defs>
+    <filter id="glow-refresh" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#6BCF7F" flood-opacity="0.8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="refresh-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6BCF7F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4ECDC4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main refresh arrows -->
+  <g filter="url(#glow-refresh)">
+    <!-- Circular refresh path -->
+    <path d="M4 12a8 8 0 0 1 8-8v3l4-4-4-4v3a10 10 0 0 0-10 10h2z" fill="url(#refresh-gradient)" />
+    <path d="M20 12a8 8 0 0 1-8 8v-3l-4 4 4 4v-3a10 10 0 0 0 10-10h-2z" fill="url(#refresh-gradient)" />
+
+    <!-- Center highlight -->
+    <circle cx="12" cy="12" r="2" fill="#B8F5CD" opacity="0.6">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Animated rotation effect -->
+  <circle cx="12" cy="12" r="9" fill="none" stroke="#6BCF7F" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,3">
+    <animateTransform attributeName="transform" type="rotate" values="0 12 12;360 12 12" dur="2s" repeatCount="indefinite" />
+  </circle>
+</svg>
